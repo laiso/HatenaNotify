@@ -96,6 +96,9 @@
 		071B33E9180D283100273715 /* Acceptance Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Acceptance Tests-Prefix.pch"; sourceTree = "<group>"; };
 		071B33F0180D2D3400273715 /* libPods-Acceptance Tests.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-Acceptance Tests.a"; path = "Pods/build/Debug-iphoneos/libPods-Acceptance Tests.a"; sourceTree = "<group>"; };
 		072453A718110FDE00804C43 /* HANNotifyServiceSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HANNotifyServiceSpec.m; sourceTree = "<group>"; };
+		07279ADD1813867A00274767 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		07279ADE1813867A00274767 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		07279ADF1813867A00274767 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		074124A3180F911300AD5607 /* libPods.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPods.a; path = "Pods/build/Debug-iphoneos/libPods.a"; sourceTree = "<group>"; };
 		074124A5180F99C500AD5607 /* HANAuthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HANAuthViewController.h; sourceTree = "<group>"; };
 		074124A6180F99C500AD5607 /* HANAuthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HANAuthViewController.m; sourceTree = "<group>"; };
@@ -465,6 +468,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				ja,
 			);
 			mainGroup = 071B339C180D218800273715;
 			productRefGroup = 071B33A6180D218800273715 /* Products */;
@@ -670,6 +674,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				071B33B2180D218800273715 /* en */,
+				07279ADD1813867A00274767 /* ja */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -678,6 +683,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				071B33CB180D218800273715 /* en */,
+				07279ADE1813867A00274767 /* ja */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -686,6 +692,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				071B33E5180D283100273715 /* en */,
+				07279ADF1813867A00274767 /* ja */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
