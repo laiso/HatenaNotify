@@ -18,7 +18,6 @@
 @property(nonatomic, strong) HANNotifyService* notify;
 @property(nonatomic, strong) NSMutableArray *items;
 @property(nonatomic, strong) HANNotifyItem* currentItem;
-@property(nonatomic, weak) IBOutlet UIToolbar* toolbar;
 @property(nonatomic, weak) IBOutlet UIBarButtonItem *logoutButton;
 - (IBAction)onLogoutButton:(id)sender;
 - (IBAction)onRefresh:(id)sender;
@@ -42,7 +41,6 @@
 {
   [super viewDidLoad];
   self.tableView.accessibilityLabel = @"NotifyItemsTable";
-  self.tableView.tableHeaderView = self.toolbar;
 }
 
 - (void)viewWillAppear:(BOOL)animated

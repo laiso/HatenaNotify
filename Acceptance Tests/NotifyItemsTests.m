@@ -13,13 +13,6 @@
 
 @implementation NotifyItemsTests
 
-- (void)beforeAll
-{
-  HANItemsViewController *rootViewController = (HANItemsViewController *)[[[UIApplication sharedApplication] keyWindow] rootViewController];
-  [rootViewController reloadTableView];
-  [tester waitForViewWithAccessibilityLabel:@"NotifyCell"];
-}
-
 // TODO ダミーデータの読み込みを先に解決
 /*
 - (void)testDisplayNotifyItems
@@ -28,11 +21,5 @@
   [tester waitForViewWithAccessibilityLabel:@"Message"];
 }
 */
-
-- (void)testLogout
-{
-  [tester tapViewWithAccessibilityLabel:@"ログアウト"];
-  [tester waitForViewWithAccessibilityLabel:@"はてなアカウントを認証する"];
-}
 
 @end

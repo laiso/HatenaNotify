@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="TnN-xo-cNa">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="h8W-U3-fDN">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
     </dependencies>
@@ -22,6 +22,9 @@
                                 <accessibility key="accessibilityConfiguration" label="HatenaID"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Rd8-3V-ygL" id="lwe-jc-dhw"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="パスワード" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="slO-y2-BwU">
                                 <rect key="frame" x="20" y="87" width="280" height="44"/>
@@ -60,6 +63,21 @@
             </objects>
             <point key="canvasLocation" x="16" y="-644"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="EhK-ru-KLr">
+            <objects>
+                <navigationController storyboardIdentifier="ItemsNavigation" definesPresentationContext="YES" id="h8W-U3-fDN" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="h3X-2U-oAT">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="TnN-xo-cNa" kind="relationship" relationship="rootViewController" id="Pee-yJ-9Ec"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mrh-Ow-iX9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-324" y="39"/>
+        </scene>
         <!--Items View Controller-->
         <scene sceneID="4eM-Qc-1pW">
             <objects>
@@ -73,7 +91,7 @@
                         </accessibility>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" restorationIdentifier="NotifyCell" selectionStyle="default" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="NotifyCell" textLabel="Cyk-mn-FXc" imageView="Pxm-Cd-F31" rowHeight="100" style="IBUITableViewCellStyleDefault" id="k4J-ai-2dy">
-                                <rect key="frame" x="0.0" y="22" width="320" height="100"/>
+                                <rect key="frame" x="0.0" y="86" width="320" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" tableViewCell="k4J-ai-2dy" id="KQf-xF-Nzn">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="99"/>
@@ -179,6 +197,13 @@
                             <outlet property="delegate" destination="TnN-xo-cNa" id="2PQ-D6-zRm"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="dVc-bN-ZUb">
+                        <barButtonItem key="leftBarButtonItem" title="ログアウト" id="9xs-TH-nS5">
+                            <connections>
+                                <action selector="onLogoutButton:" destination="TnN-xo-cNa" id="ZIa-lo-Qxg"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="jt4-4j-DCH">
                         <autoresizingMask key="autoresizingMask"/>
                         <attributedString key="attributedTitle"/>
@@ -187,23 +212,12 @@
                         </connections>
                     </refreshControl>
                     <connections>
-                        <outlet property="toolbar" destination="BpC-gq-e0n" id="MNQ-fg-aCz"/>
+                        <outlet property="logoutButton" destination="9xs-TH-nS5" id="cTw-4h-vk1"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7UB-Zj-z3H" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="BpC-gq-e0n">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                    <items>
-                        <barButtonItem title="ログアウト" id="6iK-71-21w">
-                            <connections>
-                                <action selector="onLogoutButton:" destination="TnN-xo-cNa" id="Onb-Ga-gua"/>
-                            </connections>
-                        </barButtonItem>
-                    </items>
-                </toolbar>
             </objects>
-            <point key="canvasLocation" x="16" y="13"/>
+            <point key="canvasLocation" x="146" y="39"/>
         </scene>
         <!--Web View Controller-->
         <scene sceneID="pYv-5g-gkX">
