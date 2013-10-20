@@ -45,8 +45,12 @@
     return;
   }
   
+  [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
+  
   __weak HANAuthViewController *wSelf = self;
-  [self.api login:user password:password completionHandler:^(NSError *errorOrNil) {
+  [wSelf.api login:user password:password completionHandler:^(NSError *errorOrNil) {
+    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
+    
     if(errorOrNil){
       [HANAlertUtil showError:@"認証が失敗しました"];
       return;
@@ -61,6 +65,14 @@
     
     [wSelf showResultAlert:@"認証が完了しました"];
   }];
+}
+
+#pragma mark - UITextFieldDelegate
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+  [self authenticate:textField];
+  [textField resignFirstResponder];
+  return YES;
 }
 
 #pragma mark - AlertViewDelegate

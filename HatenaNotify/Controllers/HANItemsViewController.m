@@ -127,8 +127,12 @@
     return;
   }
   
+  [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
+  
   __weak HANItemsViewController *wSelf = self;
   [[HANAccountService new] renewLoginSession:^(NSError *errorOrNil) {
+    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
+    
     [self.notify loadNotifyItems:^(NSError *errorOrNil, NSArray *items) {
       if(errorOrNil){
         [HANAlertUtil showError:@"認証エラーが発生しました。一度ログアウトして再度ログインしてください"];

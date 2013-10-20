@@ -15,7 +15,7 @@
 #import "HANPurchaseService.h"
 #import "HANAlertUtil.h"
 
-@interface HANWebViewController () <ADBannerViewDelegate>
+@interface HANWebViewController () <ADBannerViewDelegate, UIWebViewDelegate>
 @property(nonatomic, weak) IBOutlet UIWebView* webView;
 @property(nonatomic, weak) IBOutlet UIBarButtonItem *closeButton;
 @property(nonatomic, weak) IBOutlet ADBannerView *banner;
@@ -75,8 +75,27 @@
     return;
   }
   
+  [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
   [self.purchase startDisableAdsTransaction];
 }
+
+#pragma mark - UIWebViewDelegate
+- (void)webViewDidStartLoad:(UIWebView *)webView
+{
+  [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
+}
+
+- (void)webViewDidFinishLoad:(UIWebView *)webView
+{
+  [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
+}
+
+- (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
+{
+  DLog(@"didFailLoadWithError: %@", error);
+  [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
+}
+
 
 #pragma mark - ADBannerViewDelegate
 
@@ -88,7 +107,6 @@
 - (void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error
 {
   DLog(@"bannerView:didFailToReceiveAdWithError");
-  self.banner = nil;
 }
 
 #pragma mark - Private
@@ -111,8 +129,7 @@
 - (void)makeHiddenBanner
 {
   self.navigationItem.rightBarButtonItem = nil;
-  [self.banner removeFromSuperview];
-  self.banner.delegate = nil;
+  self.banner.alpha = 1.00;
   [self.view addSubview:self.webView];
 }
 
