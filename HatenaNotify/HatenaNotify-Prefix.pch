@@ -1,0 +1,35 @@
+//
+//  Prefix header
+//
+//  The contents of this file are implicitly included at the beginning of every source file.
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_3_0
+#warning "This project uses features only available in iOS SDK 3.0 and later."
+#endif
+
+#ifdef __OBJC__
+  #import <UIKit/UIKit.h>
+  #import <Foundation/Foundation.h>
+#endif
+
+// http://qiita.com/a_yasui/items/6960fdd3817336168cb8
+#ifdef DEBUG
+#    ifndef DLog
+#        define DLog(__FORMAT__,...) NSLog((@"%s [Line %d] " __FORMAT__), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__)
+#    endif
+#else
+#    ifndef DLog
+#        define DLog(...) /* */
+#    endif
+#endif /* if DEBUG */
+
+#ifndef ALog
+#  ifdef TFLog
+#    define ALog(__FORMAT__, ...) TFLog((@"%s [Line %d] " __FORMAT__), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__)
+#  else
+#    define ALog(__FORMAT__,...) NSLog((@"%s [Line %d] " __FORMAT__), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__)
+#  endif /* ADHOC */
+#endif

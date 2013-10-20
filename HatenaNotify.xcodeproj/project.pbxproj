@@ -1,0 +1,942 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		071B33A9180D218800273715 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 071B33A8180D218800273715 /* Foundation.framework */; };
+		071B33AB180D218800273715 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 071B33AA180D218800273715 /* CoreGraphics.framework */; };
+		071B33AD180D218800273715 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 071B33AC180D218800273715 /* UIKit.framework */; };
+		071B33B3180D218800273715 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 071B33B1180D218800273715 /* InfoPlist.strings */; };
+		071B33B5180D218800273715 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 071B33B4180D218800273715 /* main.m */; };
+		071B33B9180D218800273715 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 071B33B8180D218800273715 /* AppDelegate.m */; };
+		071B33BB180D218800273715 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 071B33BA180D218800273715 /* Images.xcassets */; };
+		071B33C3180D218800273715 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 071B33A8180D218800273715 /* Foundation.framework */; };
+		071B33C4180D218800273715 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 071B33AC180D218800273715 /* UIKit.framework */; };
+		071B33CC180D218800273715 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 071B33CA180D218800273715 /* InfoPlist.strings */; };
+		071B33CE180D218800273715 /* HatenaNotifySpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 071B33CD180D218800273715 /* HatenaNotifySpec.m */; };
+		071B33D8180D224900273715 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 071B33D7180D224900273715 /* Main.storyboard */; };
+		071B33DE180D283100273715 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 071B33C1180D218800273715 /* XCTest.framework */; };
+		071B33DF180D283100273715 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 071B33A8180D218800273715 /* Foundation.framework */; };
+		071B33E0180D283100273715 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 071B33AC180D218800273715 /* UIKit.framework */; };
+		071B33E6180D283100273715 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 071B33E4180D283100273715 /* InfoPlist.strings */; };
+		071B33E8180D283100273715 /* NotifyItemsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 071B33E7180D283100273715 /* NotifyItemsTests.m */; };
+		071B33EF180D2A1900273715 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 071B33D7180D224900273715 /* Main.storyboard */; };
+		071B33F1180D2D3400273715 /* libPods-Acceptance Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 071B33F0180D2D3400273715 /* libPods-Acceptance Tests.a */; };
+		072453A818110FDE00804C43 /* HANNotifyServiceSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 072453A718110FDE00804C43 /* HANNotifyServiceSpec.m */; };
+		074124A4180F911300AD5607 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 074124A3180F911300AD5607 /* libPods.a */; };
+		074124A7180F99C500AD5607 /* HANAuthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 074124A6180F99C500AD5607 /* HANAuthViewController.m */; };
+		074124A9180F9B2000AD5607 /* AuthTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 074124A8180F9B2000AD5607 /* AuthTests.m */; };
+		074124AD180FA57A00AD5607 /* HANAlertUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 074124AC180FA57A00AD5607 /* HANAlertUtil.m */; };
+		074F7002180D2FB30063BC47 /* HANAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 074F7001180D2FB30063BC47 /* HANAPIClient.m */; };
+		074F700B180D3C710063BC47 /* default-icon.gif in Resources */ = {isa = PBXBuildFile; fileRef = 074F7009180D3C710063BC47 /* default-icon.gif */; };
+		074F700E180D4ABB0063BC47 /* HANWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 074F700D180D4ABB0063BC47 /* HANWebViewController.m */; };
+		0750296C180E47D40029BDAC /* HANAPIClientSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 0750296B180E47D40029BDAC /* HANAPIClientSpec.m */; };
+		0772DB7618114CC600E27DE4 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0772DB7518114CC600E27DE4 /* iAd.framework */; };
+		0772DB791811519A00E27DE4 /* HANPurchaseService.m in Sources */ = {isa = PBXBuildFile; fileRef = 0772DB781811519A00E27DE4 /* HANPurchaseService.m */; };
+		0772DB7B181153A600E27DE4 /* HANPurchaseServiceSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 0772DB7A181153A600E27DE4 /* HANPurchaseServiceSpec.m */; };
+		0772DB7D1811573000E27DE4 /* PurchaseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0772DB7C1811573000E27DE4 /* PurchaseTests.m */; };
+		0779F917180E90180059F7E5 /* HANNotifyService.m in Sources */ = {isa = PBXBuildFile; fileRef = 0779F916180E90180059F7E5 /* HANNotifyService.m */; };
+		0779F91A180E92980059F7E5 /* HANNotifyItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 0779F919180E92980059F7E5 /* HANNotifyItem.m */; };
+		0779F91D180E9BDB0059F7E5 /* HANNotifyItemSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 0779F91C180E9BDB0059F7E5 /* HANNotifyItemSpec.m */; };
+		0779F91F180E9C860059F7E5 /* pull.json in Resources */ = {isa = PBXBuildFile; fileRef = 0779F91E180E9C860059F7E5 /* pull.json */; };
+		0779F922180E9D5F0059F7E5 /* TestHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 0779F921180E9D5F0059F7E5 /* TestHelper.m */; };
+		078FF2511810168100057027 /* HANItemsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 074F7005180D336C0063BC47 /* HANItemsViewController.m */; };
+		0790127E1810EC0D006FE839 /* TestHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 0779F921180E9D5F0059F7E5 /* TestHelper.m */; };
+		0790127F1810ECAE006FE839 /* pull.json in Resources */ = {isa = PBXBuildFile; fileRef = 0779F91E180E9C860059F7E5 /* pull.json */; };
+		07BC6F81180FB44300A8BD62 /* AcceptanceTestHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 07BC6F80180FB44300A8BD62 /* AcceptanceTestHelper.m */; };
+		07BC6F84180FDE6B00A8BD62 /* HANAccountService.m in Sources */ = {isa = PBXBuildFile; fileRef = 07BC6F83180FDE6B00A8BD62 /* HANAccountService.m */; };
+		07BC6F86180FDF2B00A8BD62 /* HANAccountServiceSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 07BC6F85180FDF2B00A8BD62 /* HANAccountServiceSpec.m */; };
+		07E20B75180EF7C100D42091 /* PushNotificationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 07E20B74180EF7C100D42091 /* PushNotificationTests.m */; };
+		8A4D9D3A8F52437796B63DAE /* libPods-HatenaNotifyTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E9FF52A5EDC443683EE8796 /* libPods-HatenaNotifyTests.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		071B33EA180D283100273715 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 071B339D180D218800273715 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 071B33A4180D218800273715;
+			remoteInfo = HatenaNotify;
+		};
+		07EB81DF1810D4D40092AEB1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 071B339D180D218800273715 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 071B33A4180D218800273715;
+			remoteInfo = HatenaNotify;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		071B33A5180D218800273715 /* HatenaNotify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HatenaNotify.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		071B33A8180D218800273715 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		071B33AA180D218800273715 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		071B33AC180D218800273715 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		071B33B0180D218800273715 /* HatenaNotify-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HatenaNotify-Info.plist"; sourceTree = "<group>"; };
+		071B33B2180D218800273715 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		071B33B4180D218800273715 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		071B33B6180D218800273715 /* HatenaNotify-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HatenaNotify-Prefix.pch"; sourceTree = "<group>"; };
+		071B33B7180D218800273715 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		071B33B8180D218800273715 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		071B33BA180D218800273715 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		071B33C0180D218800273715 /* HatenaNotifyTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HatenaNotifyTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		071B33C1180D218800273715 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		071B33C9180D218800273715 /* HatenaNotifyTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HatenaNotifyTests-Info.plist"; sourceTree = "<group>"; };
+		071B33CB180D218800273715 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		071B33CD180D218800273715 /* HatenaNotifySpec.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HatenaNotifySpec.m; sourceTree = "<group>"; };
+		071B33D7180D224900273715 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		071B33DD180D283100273715 /* Acceptance Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Acceptance Tests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		071B33E3180D283100273715 /* Acceptance Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Acceptance Tests-Info.plist"; sourceTree = "<group>"; };
+		071B33E5180D283100273715 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		071B33E7180D283100273715 /* NotifyItemsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotifyItemsTests.m; sourceTree = "<group>"; };
+		071B33E9180D283100273715 /* Acceptance Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Acceptance Tests-Prefix.pch"; sourceTree = "<group>"; };
+		071B33F0180D2D3400273715 /* libPods-Acceptance Tests.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-Acceptance Tests.a"; path = "Pods/build/Debug-iphoneos/libPods-Acceptance Tests.a"; sourceTree = "<group>"; };
+		072453A718110FDE00804C43 /* HANNotifyServiceSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HANNotifyServiceSpec.m; sourceTree = "<group>"; };
+		074124A3180F911300AD5607 /* libPods.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPods.a; path = "Pods/build/Debug-iphoneos/libPods.a"; sourceTree = "<group>"; };
+		074124A5180F99C500AD5607 /* HANAuthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HANAuthViewController.h; sourceTree = "<group>"; };
+		074124A6180F99C500AD5607 /* HANAuthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HANAuthViewController.m; sourceTree = "<group>"; };
+		074124A8180F9B2000AD5607 /* AuthTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AuthTests.m; sourceTree = "<group>"; };
+		074124AB180FA57A00AD5607 /* HANAlertUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HANAlertUtil.h; sourceTree = "<group>"; };
+		074124AC180FA57A00AD5607 /* HANAlertUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HANAlertUtil.m; sourceTree = "<group>"; };
+		074F7000180D2FB30063BC47 /* HANAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HANAPIClient.h; path = ../HANAPIClient.h; sourceTree = "<group>"; };
+		074F7001180D2FB30063BC47 /* HANAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HANAPIClient.m; path = ../HANAPIClient.m; sourceTree = "<group>"; };
+		074F7004180D336C0063BC47 /* HANItemsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HANItemsViewController.h; sourceTree = "<group>"; };
+		074F7005180D336C0063BC47 /* HANItemsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HANItemsViewController.m; sourceTree = "<group>"; };
+		074F7009180D3C710063BC47 /* default-icon.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "default-icon.gif"; sourceTree = "<group>"; };
+		074F700C180D4ABB0063BC47 /* HANWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HANWebViewController.h; sourceTree = "<group>"; };
+		074F700D180D4ABB0063BC47 /* HANWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HANWebViewController.m; sourceTree = "<group>"; };
+		0750296B180E47D40029BDAC /* HANAPIClientSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HANAPIClientSpec.m; sourceTree = "<group>"; };
+		077000B5180FF12A00408C82 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		0772DB7518114CC600E27DE4 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
+		0772DB771811519A00E27DE4 /* HANPurchaseService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HANPurchaseService.h; sourceTree = "<group>"; };
+		0772DB781811519A00E27DE4 /* HANPurchaseService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HANPurchaseService.m; sourceTree = "<group>"; };
+		0772DB7A181153A600E27DE4 /* HANPurchaseServiceSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HANPurchaseServiceSpec.m; sourceTree = "<group>"; };
+		0772DB7C1811573000E27DE4 /* PurchaseTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PurchaseTests.m; sourceTree = "<group>"; };
+		0779F915180E90180059F7E5 /* HANNotifyService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HANNotifyService.h; sourceTree = "<group>"; };
+		0779F916180E90180059F7E5 /* HANNotifyService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HANNotifyService.m; sourceTree = "<group>"; };
+		0779F918180E92980059F7E5 /* HANNotifyItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HANNotifyItem.h; sourceTree = "<group>"; };
+		0779F919180E92980059F7E5 /* HANNotifyItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HANNotifyItem.m; sourceTree = "<group>"; };
+		0779F91C180E9BDB0059F7E5 /* HANNotifyItemSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HANNotifyItemSpec.m; sourceTree = "<group>"; };
+		0779F91E180E9C860059F7E5 /* pull.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = pull.json; sourceTree = "<group>"; };
+		0779F920180E9D5F0059F7E5 /* TestHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestHelper.h; sourceTree = "<group>"; };
+		0779F921180E9D5F0059F7E5 /* TestHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestHelper.m; sourceTree = "<group>"; };
+		07BC6F7F180FB44300A8BD62 /* AcceptanceTestHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AcceptanceTestHelper.h; sourceTree = "<group>"; };
+		07BC6F80180FB44300A8BD62 /* AcceptanceTestHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AcceptanceTestHelper.m; sourceTree = "<group>"; };
+		07BC6F82180FDE6B00A8BD62 /* HANAccountService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HANAccountService.h; sourceTree = "<group>"; };
+		07BC6F83180FDE6B00A8BD62 /* HANAccountService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HANAccountService.m; sourceTree = "<group>"; };
+		07BC6F85180FDF2B00A8BD62 /* HANAccountServiceSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HANAccountServiceSpec.m; sourceTree = "<group>"; };
+		07E20B74180EF7C100D42091 /* PushNotificationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PushNotificationTests.m; sourceTree = "<group>"; };
+		07E56951180FE5420035DA85 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		07FC0443180F005C00FB07B0 /* HatenaNotify.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = HatenaNotify.entitlements; sourceTree = "<group>"; };
+		0E9FF52A5EDC443683EE8796 /* libPods-HatenaNotifyTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HatenaNotifyTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1FB478B8C85D4081A8C015CF /* Pods-Acceptance Tests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Acceptance Tests.xcconfig"; path = "Pods/Pods-Acceptance Tests.xcconfig"; sourceTree = "<group>"; };
+		2E389FC3B4E844C489C13855 /* libPods-Acceptance Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Acceptance Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		341661B6A5F34EEB94A2AB27 /* Pods-HatenaNotifyTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HatenaNotifyTests.xcconfig"; path = "Pods/Pods-HatenaNotifyTests.xcconfig"; sourceTree = "<group>"; };
+		57D3D6C674554AAD9C1A8009 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		D49A3484B0E24A5FBA4C7A79 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		071B33A2180D218800273715 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0772DB7618114CC600E27DE4 /* iAd.framework in Frameworks */,
+				074124A4180F911300AD5607 /* libPods.a in Frameworks */,
+				071B33AB180D218800273715 /* CoreGraphics.framework in Frameworks */,
+				071B33AD180D218800273715 /* UIKit.framework in Frameworks */,
+				071B33A9180D218800273715 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		071B33BD180D218800273715 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				071B33C4180D218800273715 /* UIKit.framework in Frameworks */,
+				071B33C3180D218800273715 /* Foundation.framework in Frameworks */,
+				8A4D9D3A8F52437796B63DAE /* libPods-HatenaNotifyTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		071B33DA180D283100273715 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				071B33F1180D2D3400273715 /* libPods-Acceptance Tests.a in Frameworks */,
+				071B33DE180D283100273715 /* XCTest.framework in Frameworks */,
+				071B33E0180D283100273715 /* UIKit.framework in Frameworks */,
+				071B33DF180D283100273715 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		071B339C180D218800273715 = {
+			isa = PBXGroup;
+			children = (
+				071B33AE180D218800273715 /* HatenaNotify */,
+				074F7007180D3C710063BC47 /* Resources */,
+				071B33C7180D218800273715 /* HatenaNotifyTests */,
+				071B33E1180D283100273715 /* Acceptance Tests */,
+				071B33A7180D218800273715 /* Frameworks */,
+				071B33A6180D218800273715 /* Products */,
+				57D3D6C674554AAD9C1A8009 /* Pods.xcconfig */,
+				1FB478B8C85D4081A8C015CF /* Pods-Acceptance Tests.xcconfig */,
+				341661B6A5F34EEB94A2AB27 /* Pods-HatenaNotifyTests.xcconfig */,
+			);
+			sourceTree = "<group>";
+		};
+		071B33A6180D218800273715 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				071B33A5180D218800273715 /* HatenaNotify.app */,
+				071B33C0180D218800273715 /* HatenaNotifyTests.octest */,
+				071B33DD180D283100273715 /* Acceptance Tests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		071B33A7180D218800273715 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0772DB7518114CC600E27DE4 /* iAd.framework */,
+				077000B5180FF12A00408C82 /* SenTestingKit.framework */,
+				07E56951180FE5420035DA85 /* Accounts.framework */,
+				074124A3180F911300AD5607 /* libPods.a */,
+				071B33F0180D2D3400273715 /* libPods-Acceptance Tests.a */,
+				071B33A8180D218800273715 /* Foundation.framework */,
+				071B33AA180D218800273715 /* CoreGraphics.framework */,
+				071B33AC180D218800273715 /* UIKit.framework */,
+				071B33C1180D218800273715 /* XCTest.framework */,
+				D49A3484B0E24A5FBA4C7A79 /* libPods.a */,
+				2E389FC3B4E844C489C13855 /* libPods-Acceptance Tests.a */,
+				0E9FF52A5EDC443683EE8796 /* libPods-HatenaNotifyTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		071B33AE180D218800273715 /* HatenaNotify */ = {
+			isa = PBXGroup;
+			children = (
+				07403229180D52C40077DBC5 /* Models */,
+				074F7003180D330B0063BC47 /* Controllers */,
+				074124AA180FA55000AD5607 /* Utilities */,
+				071B33B7180D218800273715 /* AppDelegate.h */,
+				071B33B8180D218800273715 /* AppDelegate.m */,
+				071B33AF180D218800273715 /* Supporting Files */,
+			);
+			path = HatenaNotify;
+			sourceTree = "<group>";
+		};
+		071B33AF180D218800273715 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				071B33D7180D224900273715 /* Main.storyboard */,
+				07FC0443180F005C00FB07B0 /* HatenaNotify.entitlements */,
+				071B33BA180D218800273715 /* Images.xcassets */,
+				071B33B0180D218800273715 /* HatenaNotify-Info.plist */,
+				071B33B1180D218800273715 /* InfoPlist.strings */,
+				071B33B4180D218800273715 /* main.m */,
+				071B33B6180D218800273715 /* HatenaNotify-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		071B33C7180D218800273715 /* HatenaNotifyTests */ = {
+			isa = PBXGroup;
+			children = (
+				071B33C8180D218800273715 /* Supporting Files */,
+				0779F91B180E9BBC0059F7E5 /* Fixtures */,
+				071B33CD180D218800273715 /* HatenaNotifySpec.m */,
+				0750296B180E47D40029BDAC /* HANAPIClientSpec.m */,
+				0779F91C180E9BDB0059F7E5 /* HANNotifyItemSpec.m */,
+				07BC6F85180FDF2B00A8BD62 /* HANAccountServiceSpec.m */,
+				072453A718110FDE00804C43 /* HANNotifyServiceSpec.m */,
+				0772DB7A181153A600E27DE4 /* HANPurchaseServiceSpec.m */,
+			);
+			path = HatenaNotifyTests;
+			sourceTree = "<group>";
+		};
+		071B33C8180D218800273715 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0779F920180E9D5F0059F7E5 /* TestHelper.h */,
+				0779F921180E9D5F0059F7E5 /* TestHelper.m */,
+				071B33C9180D218800273715 /* HatenaNotifyTests-Info.plist */,
+				071B33CA180D218800273715 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		071B33E1180D283100273715 /* Acceptance Tests */ = {
+			isa = PBXGroup;
+			children = (
+				071B33E2180D283100273715 /* Supporting Files */,
+				071B33E7180D283100273715 /* NotifyItemsTests.m */,
+				07E20B74180EF7C100D42091 /* PushNotificationTests.m */,
+				074124A8180F9B2000AD5607 /* AuthTests.m */,
+				0772DB7C1811573000E27DE4 /* PurchaseTests.m */,
+			);
+			path = "Acceptance Tests";
+			sourceTree = "<group>";
+		};
+		071B33E2180D283100273715 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				07BC6F7F180FB44300A8BD62 /* AcceptanceTestHelper.h */,
+				07BC6F80180FB44300A8BD62 /* AcceptanceTestHelper.m */,
+				071B33E3180D283100273715 /* Acceptance Tests-Info.plist */,
+				071B33E4180D283100273715 /* InfoPlist.strings */,
+				071B33E9180D283100273715 /* Acceptance Tests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		07403229180D52C40077DBC5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				074F7000180D2FB30063BC47 /* HANAPIClient.h */,
+				074F7001180D2FB30063BC47 /* HANAPIClient.m */,
+				0779F915180E90180059F7E5 /* HANNotifyService.h */,
+				0779F916180E90180059F7E5 /* HANNotifyService.m */,
+				0779F918180E92980059F7E5 /* HANNotifyItem.h */,
+				0779F919180E92980059F7E5 /* HANNotifyItem.m */,
+				07BC6F82180FDE6B00A8BD62 /* HANAccountService.h */,
+				07BC6F83180FDE6B00A8BD62 /* HANAccountService.m */,
+				0772DB771811519A00E27DE4 /* HANPurchaseService.h */,
+				0772DB781811519A00E27DE4 /* HANPurchaseService.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		074124AA180FA55000AD5607 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				074124AB180FA57A00AD5607 /* HANAlertUtil.h */,
+				074124AC180FA57A00AD5607 /* HANAlertUtil.m */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		074F7003180D330B0063BC47 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				074F7004180D336C0063BC47 /* HANItemsViewController.h */,
+				074F7005180D336C0063BC47 /* HANItemsViewController.m */,
+				074F700C180D4ABB0063BC47 /* HANWebViewController.h */,
+				074F700D180D4ABB0063BC47 /* HANWebViewController.m */,
+				074124A5180F99C500AD5607 /* HANAuthViewController.h */,
+				074124A6180F99C500AD5607 /* HANAuthViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		074F7007180D3C710063BC47 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				074F7008180D3C710063BC47 /* Icons */,
+				074F700A180D3C710063BC47 /* Images */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		074F7008180D3C710063BC47 /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				074F7009180D3C710063BC47 /* default-icon.gif */,
+			);
+			path = Icons;
+			sourceTree = "<group>";
+		};
+		074F700A180D3C710063BC47 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		0779F91B180E9BBC0059F7E5 /* Fixtures */ = {
+			isa = PBXGroup;
+			children = (
+				0779F91E180E9C860059F7E5 /* pull.json */,
+			);
+			path = Fixtures;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		071B33A4180D218800273715 /* HatenaNotify */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 071B33D1180D218800273715 /* Build configuration list for PBXNativeTarget "HatenaNotify" */;
+			buildPhases = (
+				07999B815F124A429C6DE211 /* Check Pods Manifest.lock */,
+				071B33A1180D218800273715 /* Sources */,
+				071B33A2180D218800273715 /* Frameworks */,
+				071B33A3180D218800273715 /* Resources */,
+				9BB58E62FB504D6F85B86FF4 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HatenaNotify;
+			productName = HatenaNotify;
+			productReference = 071B33A5180D218800273715 /* HatenaNotify.app */;
+			productType = "com.apple.product-type.application";
+		};
+		071B33BF180D218800273715 /* HatenaNotifyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 071B33D4180D218800273715 /* Build configuration list for PBXNativeTarget "HatenaNotifyTests" */;
+			buildPhases = (
+				046025030DA7436388DA814B /* Check Pods Manifest.lock */,
+				071B33BC180D218800273715 /* Sources */,
+				071B33BD180D218800273715 /* Frameworks */,
+				071B33BE180D218800273715 /* Resources */,
+				053769EFCD0A4978865283D0 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				07EB81E01810D4D40092AEB1 /* PBXTargetDependency */,
+			);
+			name = HatenaNotifyTests;
+			productName = HatenaNotifyTests;
+			productReference = 071B33C0180D218800273715 /* HatenaNotifyTests.octest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		071B33DC180D283100273715 /* Acceptance Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 071B33EC180D283100273715 /* Build configuration list for PBXNativeTarget "Acceptance Tests" */;
+			buildPhases = (
+				17EBA1A94E8B49E6BD338277 /* Check Pods Manifest.lock */,
+				071B33D9180D283100273715 /* Sources */,
+				071B33DA180D283100273715 /* Frameworks */,
+				071B33DB180D283100273715 /* Resources */,
+				61C7EA31D14D41498E34E4F4 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				071B33EB180D283100273715 /* PBXTargetDependency */,
+			);
+			name = "Acceptance Tests";
+			productName = "Acceptance Tests";
+			productReference = 071B33DD180D283100273715 /* Acceptance Tests.octest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		071B339D180D218800273715 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = laiso;
+				TargetAttributes = {
+					071B33A4180D218800273715 = {
+						DevelopmentTeam = 3F6JXH58U8;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Keychain = {
+								enabled = 0;
+							};
+						};
+					};
+					071B33BF180D218800273715 = {
+						TestTargetID = 071B33A4180D218800273715;
+					};
+					071B33DC180D283100273715 = {
+						TestTargetID = 071B33A4180D218800273715;
+					};
+				};
+			};
+			buildConfigurationList = 071B33A0180D218800273715 /* Build configuration list for PBXProject "HatenaNotify" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 071B339C180D218800273715;
+			productRefGroup = 071B33A6180D218800273715 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				071B33A4180D218800273715 /* HatenaNotify */,
+				071B33BF180D218800273715 /* HatenaNotifyTests */,
+				071B33DC180D283100273715 /* Acceptance Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		071B33A3180D218800273715 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				071B33D8180D224900273715 /* Main.storyboard in Resources */,
+				071B33B3180D218800273715 /* InfoPlist.strings in Resources */,
+				071B33BB180D218800273715 /* Images.xcassets in Resources */,
+				074F700B180D3C710063BC47 /* default-icon.gif in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		071B33BE180D218800273715 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0779F91F180E9C860059F7E5 /* pull.json in Resources */,
+				071B33CC180D218800273715 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		071B33DB180D283100273715 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				071B33E6180D283100273715 /* InfoPlist.strings in Resources */,
+				071B33EF180D2A1900273715 /* Main.storyboard in Resources */,
+				0790127F1810ECAE006FE839 /* pull.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		046025030DA7436388DA814B /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		053769EFCD0A4978865283D0 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-HatenaNotifyTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		07999B815F124A429C6DE211 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		17EBA1A94E8B49E6BD338277 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		61C7EA31D14D41498E34E4F4 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-Acceptance Tests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9BB58E62FB504D6F85B86FF4 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		071B33A1180D218800273715 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				078FF2511810168100057027 /* HANItemsViewController.m in Sources */,
+				074F700E180D4ABB0063BC47 /* HANWebViewController.m in Sources */,
+				071B33B9180D218800273715 /* AppDelegate.m in Sources */,
+				074124AD180FA57A00AD5607 /* HANAlertUtil.m in Sources */,
+				074124A7180F99C500AD5607 /* HANAuthViewController.m in Sources */,
+				071B33B5180D218800273715 /* main.m in Sources */,
+				0772DB791811519A00E27DE4 /* HANPurchaseService.m in Sources */,
+				07BC6F84180FDE6B00A8BD62 /* HANAccountService.m in Sources */,
+				0779F91A180E92980059F7E5 /* HANNotifyItem.m in Sources */,
+				074F7002180D2FB30063BC47 /* HANAPIClient.m in Sources */,
+				0779F917180E90180059F7E5 /* HANNotifyService.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		071B33BC180D218800273715 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				071B33CE180D218800273715 /* HatenaNotifySpec.m in Sources */,
+				0750296C180E47D40029BDAC /* HANAPIClientSpec.m in Sources */,
+				07BC6F86180FDF2B00A8BD62 /* HANAccountServiceSpec.m in Sources */,
+				0772DB7B181153A600E27DE4 /* HANPurchaseServiceSpec.m in Sources */,
+				072453A818110FDE00804C43 /* HANNotifyServiceSpec.m in Sources */,
+				0779F91D180E9BDB0059F7E5 /* HANNotifyItemSpec.m in Sources */,
+				0779F922180E9D5F0059F7E5 /* TestHelper.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		071B33D9180D283100273715 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0772DB7D1811573000E27DE4 /* PurchaseTests.m in Sources */,
+				07BC6F81180FB44300A8BD62 /* AcceptanceTestHelper.m in Sources */,
+				074124A9180F9B2000AD5607 /* AuthTests.m in Sources */,
+				07E20B75180EF7C100D42091 /* PushNotificationTests.m in Sources */,
+				071B33E8180D283100273715 /* NotifyItemsTests.m in Sources */,
+				0790127E1810EC0D006FE839 /* TestHelper.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		071B33EB180D283100273715 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 071B33A4180D218800273715 /* HatenaNotify */;
+			targetProxy = 071B33EA180D283100273715 /* PBXContainerItemProxy */;
+		};
+		07EB81E01810D4D40092AEB1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 071B33A4180D218800273715 /* HatenaNotify */;
+			targetProxy = 07EB81DF1810D4D40092AEB1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		071B33B1180D218800273715 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				071B33B2180D218800273715 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		071B33CA180D218800273715 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				071B33CB180D218800273715 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		071B33E4180D283100273715 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				071B33E5180D283100273715 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		071B33CF180D218800273715 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		071B33D0180D218800273715 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		071B33D2180D218800273715 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 57D3D6C674554AAD9C1A8009 /* Pods.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				BUNDLE_LOADER = "";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HatenaNotify/HatenaNotify-Prefix.pch";
+				INFOPLIST_FILE = "HatenaNotify/HatenaNotify-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		071B33D3180D218800273715 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 57D3D6C674554AAD9C1A8009 /* Pods.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				BUNDLE_LOADER = "";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HatenaNotify/HatenaNotify-Prefix.pch";
+				INFOPLIST_FILE = "HatenaNotify/HatenaNotify-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		071B33D5180D218800273715 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 341661B6A5F34EEB94A2AB27 /* Pods-HatenaNotifyTests.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/HatenaNotify.app/HatenaNotify";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HatenaNotify/HatenaNotify-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "HatenaNotifyTests/HatenaNotifyTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		071B33D6180D218800273715 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 341661B6A5F34EEB94A2AB27 /* Pods-HatenaNotifyTests.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/HatenaNotify.app/HatenaNotify";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HatenaNotify/HatenaNotify-Prefix.pch";
+				INFOPLIST_FILE = "HatenaNotifyTests/HatenaNotifyTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+		071B33ED180D283100273715 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1FB478B8C85D4081A8C015CF /* Pods-Acceptance Tests.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/HatenaNotify.app/HatenaNotify";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Acceptance Tests/Acceptance Tests-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Acceptance Tests/Acceptance Tests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		071B33EE180D283100273715 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1FB478B8C85D4081A8C015CF /* Pods-Acceptance Tests.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/HatenaNotify.app/HatenaNotify";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Acceptance Tests/Acceptance Tests-Prefix.pch";
+				INFOPLIST_FILE = "Acceptance Tests/Acceptance Tests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		071B33A0180D218800273715 /* Build configuration list for PBXProject "HatenaNotify" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				071B33CF180D218800273715 /* Debug */,
+				071B33D0180D218800273715 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		071B33D1180D218800273715 /* Build configuration list for PBXNativeTarget "HatenaNotify" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				071B33D2180D218800273715 /* Debug */,
+				071B33D3180D218800273715 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		071B33D4180D218800273715 /* Build configuration list for PBXNativeTarget "HatenaNotifyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				071B33D5180D218800273715 /* Debug */,
+				071B33D6180D218800273715 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		071B33EC180D283100273715 /* Build configuration list for PBXNativeTarget "Acceptance Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				071B33ED180D283100273715 /* Debug */,
+				071B33EE180D283100273715 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 071B339D180D218800273715 /* Project object */;
+}

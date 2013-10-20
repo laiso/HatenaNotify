@@ -1,0 +1,52 @@
+PODS:
+  - AFNetworking (2.0.1):
+    - AFNetworking/NSURLConnection
+    - AFNetworking/NSURLSession
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+    - AFNetworking/UIKit
+  - AFNetworking/NSURLConnection (2.0.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/NSURLSession (2.0.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (2.0.1)
+  - AFNetworking/Security (2.0.1)
+  - AFNetworking/Serialization (2.0.1)
+  - AFNetworking/UIKit (2.0.1):
+    - AFNetworking/NSURLConnection
+  - KIF (2.0.0)
+  - Kiwi (2.2.2):
+    - Kiwi/SenTestingKit
+  - Kiwi/ARC (2.2.2)
+  - Kiwi/NonARC (2.2.2)
+  - Kiwi/SenTestingKit (2.2.2):
+    - Kiwi/ARC
+    - Kiwi/NonARC
+  - OHHTTPStubs (3.0.1)
+  - SDWebImage (3.5):
+    - SDWebImage/Core
+  - SDWebImage/Core (3.5)
+  - SSKeychain (1.2.1)
+
+DEPENDENCIES:
+  - AFNetworking (~> 2.0)
+  - KIF (~> 2.0)
+  - Kiwi (~> 2.2.2)
+  - OHHTTPStubs
+  - SDWebImage
+  - SSKeychain
+
+SPEC CHECKSUMS:
+  AFNetworking: a6f11ac4ac087303e6ff87adc1ba57b0dac20ef8
+  KIF: ff3b46deb62ce3f8e99c6a2c786729e1eea241ba
+  Kiwi: 03539aeb004ccd42bdbc31253617b26364315df4
+  OHHTTPStubs: d9cd35d84176e35cd2cb8bcaa3ad50fdfc660566
+  SDWebImage: f1a72472f8a2d54445f1fedafe2090593d9caf7f
+  SSKeychain: d18926838c2e7cd342e2a49e9f869858e49f035a
+
+COCOAPODS: 0.26.2
