@@ -51,24 +51,20 @@
   [wSelf.api login:user password:password completionHandler:^(NSError *errorOrNil) {
     [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
     
+    if(!errorOrNil){
+      HANAccountService* account = [HANAccountService new];
+      [account saveUserName:user password:password];
+      [wSelf showResultAlert:@"認証が完了しました"];
+      return;
+    }
+    
     if(errorOrNil.code == kHatenaNotifyErrorAuthenticationFailed){
       [HANAlertUtil showError:@"認証が失敗しました"];
       return;
     }
     
-    if(errorOrNil){
-      [HANAlertUtil showError:errorOrNil.localizedDescription];
-      return;
-    }
-    
-    HANAccountService* account = [HANAccountService new];
-    BOOL save = [account saveUserName:user password:password];
-    if(!save){
-      [HANAlertUtil showError:@"認証が失敗しました"];
-      return;
-    }
-    
-    [wSelf showResultAlert:@"認証が完了しました"];
+
+    [HANAlertUtil showError:errorOrNil.localizedDescription ?: @"認証が完了しました"];
   }];
 }
 
