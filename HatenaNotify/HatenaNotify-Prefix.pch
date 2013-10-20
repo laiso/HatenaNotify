@@ -33,3 +33,8 @@
 #    define ALog(__FORMAT__,...) NSLog((@"%s [Line %d] " __FORMAT__), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__)
 #  endif /* ADHOC */
 #endif
+
+typedef NS_ENUM(NSInteger, kHatenaNotifyErrorCode){
+  kHatenaNotifyErrorAuthenticationFailed = 0,
+  kHatenaNotifyErrorUnknown = -1,
+};

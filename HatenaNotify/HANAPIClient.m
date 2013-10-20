@@ -64,7 +64,7 @@ static const NSString *kHANAPIClientPersistent = @"1";
                NSString* logged = [[[operation response] allHeaderFields] objectForKey:@"X-Welcome"];
                if(![logged isEqualToString:name]){
                  NSError* error = [NSError errorWithDomain:[[NSBundle mainBundle] bundleIdentifier]
-                                                      code:-1 userInfo:@{}];
+                                                      code:kHatenaNotifyErrorAuthenticationFailed userInfo:@{}];
                  completionHandler(error);
                  return;
                }

@@ -51,8 +51,13 @@
   [wSelf.api login:user password:password completionHandler:^(NSError *errorOrNil) {
     [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
     
-    if(errorOrNil){
+    if(errorOrNil.code == kHatenaNotifyErrorAuthenticationFailed){
       [HANAlertUtil showError:@"認証が失敗しました"];
+      return;
+    }
+    
+    if(errorOrNil){
+      [HANAlertUtil showError:errorOrNil.localizedDescription];
       return;
     }
     
