@@ -52,8 +52,7 @@ NSString * const kHatenaNotifyBackgroundfetchedNotification = @"HatenaNotifyBack
     NSNotification *notification = [NSNotification notificationWithName:kHatenaNotifyBackgroundfetchedNotification object:items];
     [[NSNotificationCenter defaultCenter] postNotification:notification];
     
-    completionHandler(errorOrNil, items);
-//    completionHandler(errorOrNil, [wSelf findNewNotifyItems:items]);
+    completionHandler(errorOrNil, [wSelf findNewNotifyItems:items]);
     
     if(!errorOrNil){
       // findNewNotifyItemsより後
