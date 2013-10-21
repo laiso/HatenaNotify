@@ -50,6 +50,7 @@
   [self reloadTableView];
   
   [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reloadTableView) name:kHatenaNotifyBackgroundfetchedNotification object:nil];
+  [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reloadTableView) name:UIApplicationDidEnterBackgroundNotification object:nil];
 }
 
 - (void)viewWillDisappear:(BOOL)animated
