@@ -9,12 +9,12 @@
 
 @interface HANAPIClient()
 @property(nonatomic, strong) AFHTTPRequestOperationManager *request;
-@property(nonatomic) BOOL hasSession;
 @end
 
 @implementation HANAPIClient
 
-static const NSString *kHANAPIClientPersistent = @"1";
+static NSString * const kHANAPIClientPersistent = @"1";
+static NSString * const kHANAPIClientCookieKey =@"HANAPIClientCookieKey";
 
 - (id)init
 {
@@ -27,10 +27,13 @@ static const NSString *kHANAPIClientPersistent = @"1";
 
 - (void)pullNotify:(void (^)(NSError *errorOrNil, NSArray *notices))completionHandler
 {
-  if(!self.hasSession){
+  NSArray *cookies = [self loadCookies];
+  if(cookies.count == 0){
+    // TODO 適切に処理する
     completionHandler(nil, @[]);
     return;
   }
+  
   
   [self.request setResponseSerializer:[AFJSONResponseSerializer serializer]];
   [self.request GET:@"https://www.hatena.ne.jp/notify/api/pull"
@@ -68,7 +71,10 @@ static const NSString *kHANAPIClientPersistent = @"1";
                  completionHandler(error);
                  return;
                }
+               
+               // 成功
                completionHandler(nil);
+               [self storeCookie];
              }
              failure:^(AFHTTPRequestOperation *operation, NSError *error) {
                completionHandler(error);
@@ -77,25 +83,46 @@ static const NSString *kHANAPIClientPersistent = @"1";
 
 - (void)logout
 {
-  NSHTTPCookieStorage *storage = [NSHTTPCookieStorage sharedHTTPCookieStorage];
-  [[self loadCookies] enumerateObjectsUsingBlock:^(NSHTTPCookie *cookie, NSUInteger idx, BOOL *stop) {
-    [storage deleteCookie:cookie];
-  }];
+  [self deleteCookies];
 }
 
 #pragma mark - Private
-
-- (BOOL)hasSession
-{
-  return ([[self loadCookies] count] > 0);
-}
-
 - (void)onError:(NSError *)error
 {
   ALog(@"%@", error.localizedDescription);
 }
 
 - (NSArray *)loadCookies
+{
+  [self deleteCookies];
+  
+  NSMutableArray *cookies = [NSMutableArray array];
+  NSDictionary *properties = [[NSUserDefaults standardUserDefaults] objectForKey:kHANAPIClientCookieKey];
+  NSHTTPCookie *c = [NSHTTPCookie cookieWithProperties:properties];
+  if(c){
+    [[NSHTTPCookieStorage sharedHTTPCookieStorage] setCookie:c];
+    [cookies addObject:c];
+  }
+  return cookies;
+}
+
+- (void)storeCookie
+{
+  NSHTTPCookie *cookie = [[self loadSiteCookies] lastObject];
+  if(cookie){
+    [[NSUserDefaults standardUserDefaults] setObject:cookie.properties forKey:kHANAPIClientCookieKey];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+  }
+}
+
+- (void)deleteCookies
+{
+  [[self loadSiteCookies] enumerateObjectsUsingBlock:^(NSHTTPCookie *cookie, NSUInteger idx, BOOL *stop) {
+    [[NSHTTPCookieStorage sharedHTTPCookieStorage] deleteCookie:cookie];
+  }];
+}
+
+- (NSArray *)loadSiteCookies
 {
   NSHTTPCookieStorage *storage = [NSHTTPCookieStorage sharedHTTPCookieStorage];
   return [storage cookiesForURL:[NSURL URLWithString:@"http://www.hatena.ne.jp"]];

@@ -128,19 +128,18 @@
   [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
   
   __weak HANItemsViewController *wSelf = self;
-  [[HANAccountService new] renewLoginSession:^(NSError *errorOrNil) {
-    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
+  
+  [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
+  
+  [self.notify loadNotifyItems:^(NSError *errorOrNil, NSArray *items) {
+    if(errorOrNil){
+      [HANAlertUtil showError:@"認証エラーが発生しました。一度ログアウトして再度ログインしてください"];
+      return;
+    }
     
-    [self.notify loadNotifyItems:^(NSError *errorOrNil, NSArray *items) {
-      if(errorOrNil){
-        [HANAlertUtil showError:@"認証エラーが発生しました。一度ログアウトして再度ログインしてください"];
-        return;
-      }
-      
-      DLog(@"Load %d items.", items.count);
-      wSelf.items = [items mutableCopy];
-      [wSelf.tableView reloadData];
-    }];
+    DLog(@"Load %d items.", items.count);
+    wSelf.items = [items mutableCopy];
+    [wSelf.tableView reloadData];
   }];
 }
 

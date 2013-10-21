@@ -13,7 +13,6 @@ describe(@"HANAPIClientTests", ^{
     [client logout];
   });
   it(@"ログインする", ^{
-    __block BOOL success = NO;
     id req = [AFHTTPRequestOperationManager mock];
     [req expect:@selector(setResponseSerializer:)];
     id block = ^(NSArray* params){
@@ -26,11 +25,17 @@ describe(@"HANAPIClientTests", ^{
     };
     [req stub:@selector(POST:parameters:success:failure:) withBlock:block];
     [client setValue:req forKey:@"request"];
+    
+    __block BOOL success = NO;
     [client login:@"-----------hogehoge------------" password:@"hoehogehoge" completionHandler:^(NSError *errorOrNil) {
       success = (errorOrNil == nil);
     }];
     
     [[expectFutureValue(theValue(success)) shouldEventually] beTrue];
+  });
+  it(@"Cookieは保存されていない", ^{
+    NSArray *cookies = [[NSHTTPCookieStorage sharedHTTPCookieStorage] cookiesForURL:[NSURL URLWithString:@"http://www.hatena.ne.jp"]];
+    [[theValue(cookies.count) should] equal:theValue(0)];
   });
 });
 

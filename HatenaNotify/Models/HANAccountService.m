@@ -62,26 +62,6 @@ static NSString * const kHatenaNotifyKeychainServiceName = @"so.lai.hatenanotify
   return del;
 }
 
-- (void)renewLoginSession:(void (^)(NSError *errorOrNil))completionHandler
-{
-  if(self.isValidAccount){
-    [self.api logout];
-    [self.api login:self.userName password:self.password completionHandler:^(NSError *errorOrNil) {
-      if(!errorOrNil){
-        completionHandler(nil);
-        return;
-      }
-      
-      completionHandler(errorOrNil);
-      return;
-    }];
-  }else{
-    ALog(@"Couldn't find valid account.");
-    NSError* error = [NSError errorWithDomain:@"" code:-1 userInfo:@{}];
-    completionHandler(error);
-  }
-}
-
 #pragma mark - Private
 
 @end

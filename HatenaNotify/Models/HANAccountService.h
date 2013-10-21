@@ -11,5 +11,4 @@
 @property(nonatomic, readonly) BOOL isValidAccount;
 - (BOOL)saveUserName:(NSString *)userName password:(NSString *)password;
 - (BOOL)deleteAccount;
-- (void)renewLoginSession:(void (^)(NSError *errorOrNil))completionHandler;
 @end

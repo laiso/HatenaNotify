@@ -45,18 +45,6 @@ describe(@"HANAccountService", ^{
       [[account.userName should] equal:@"hoge"];
       [[account.password should] equal:@"hage"];
     });
-    it(@"セッション継続", ^{
-      id api = [HANAPIClient mock];
-      [api expect:@selector(logout)];
-      id block = ^(NSArray *params) {};
-      [api stub:@selector(login:password:completionHandler:) withBlock:block];
-      [account setValue:api forKey:@"api"];
-      __block NSError *error;
-      [account renewLoginSession:^(NSError *errorOrNil) {
-        error = errorOrNil;
-      }];
-      [[expectFutureValue(error) shouldEventually] beNil];
-    });
   });
 });
 
