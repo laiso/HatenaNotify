@@ -72,20 +72,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		071B33A5180D218800273715 /* HatenaNotify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HatenaNotify.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		071B33A5180D218800273715 /* hNotify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hNotify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		071B33A8180D218800273715 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		071B33AA180D218800273715 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		071B33AC180D218800273715 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		071B33B0180D218800273715 /* HatenaNotify-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HatenaNotify-Info.plist"; sourceTree = "<group>"; };
+		071B33B0180D218800273715 /* hNotify-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "hNotify-Info.plist"; sourceTree = "<group>"; };
 		071B33B2180D218800273715 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		071B33B4180D218800273715 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		071B33B6180D218800273715 /* HatenaNotify-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HatenaNotify-Prefix.pch"; sourceTree = "<group>"; };
+		071B33B6180D218800273715 /* hNotify-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "hNotify-Prefix.pch"; sourceTree = "<group>"; };
 		071B33B7180D218800273715 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		071B33B8180D218800273715 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		071B33BA180D218800273715 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		071B33C0180D218800273715 /* HatenaNotifyTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HatenaNotifyTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		071B33C0180D218800273715 /* hNotifyTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = hNotifyTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		071B33C1180D218800273715 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		071B33C9180D218800273715 /* HatenaNotifyTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HatenaNotifyTests-Info.plist"; sourceTree = "<group>"; };
+		071B33C9180D218800273715 /* hNotifyTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "hNotifyTests-Info.plist"; sourceTree = "<group>"; };
 		071B33CB180D218800273715 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		071B33CD180D218800273715 /* HatenaNotifySpec.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HatenaNotifySpec.m; sourceTree = "<group>"; };
 		071B33D7180D224900273715 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -198,8 +198,8 @@
 		071B33A6180D218800273715 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				071B33A5180D218800273715 /* HatenaNotify.app */,
-				071B33C0180D218800273715 /* HatenaNotifyTests.octest */,
+				071B33A5180D218800273715 /* hNotify.app */,
+				071B33C0180D218800273715 /* hNotifyTests.octest */,
 				071B33DD180D283100273715 /* Acceptance Tests.octest */,
 			);
 			name = Products;
@@ -243,10 +243,10 @@
 				071B33D7180D224900273715 /* Main.storyboard */,
 				07FC0443180F005C00FB07B0 /* HatenaNotify.entitlements */,
 				071B33BA180D218800273715 /* Images.xcassets */,
-				071B33B0180D218800273715 /* HatenaNotify-Info.plist */,
+				071B33B0180D218800273715 /* hNotify-Info.plist */,
 				071B33B1180D218800273715 /* InfoPlist.strings */,
 				071B33B4180D218800273715 /* main.m */,
-				071B33B6180D218800273715 /* HatenaNotify-Prefix.pch */,
+				071B33B6180D218800273715 /* hNotify-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -271,7 +271,7 @@
 			children = (
 				0779F920180E9D5F0059F7E5 /* TestHelper.h */,
 				0779F921180E9D5F0059F7E5 /* TestHelper.m */,
-				071B33C9180D218800273715 /* HatenaNotifyTests-Info.plist */,
+				071B33C9180D218800273715 /* hNotifyTests-Info.plist */,
 				071B33CA180D218800273715 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
@@ -375,9 +375,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		071B33A4180D218800273715 /* HatenaNotify */ = {
+		071B33A4180D218800273715 /* hNotify */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 071B33D1180D218800273715 /* Build configuration list for PBXNativeTarget "HatenaNotify" */;
+			buildConfigurationList = 071B33D1180D218800273715 /* Build configuration list for PBXNativeTarget "hNotify" */;
 			buildPhases = (
 				07999B815F124A429C6DE211 /* Check Pods Manifest.lock */,
 				071B33A1180D218800273715 /* Sources */,
@@ -389,14 +389,14 @@
 			);
 			dependencies = (
 			);
-			name = HatenaNotify;
+			name = hNotify;
 			productName = HatenaNotify;
-			productReference = 071B33A5180D218800273715 /* HatenaNotify.app */;
+			productReference = 071B33A5180D218800273715 /* hNotify.app */;
 			productType = "com.apple.product-type.application";
 		};
-		071B33BF180D218800273715 /* HatenaNotifyTests */ = {
+		071B33BF180D218800273715 /* hNotifyTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 071B33D4180D218800273715 /* Build configuration list for PBXNativeTarget "HatenaNotifyTests" */;
+			buildConfigurationList = 071B33D4180D218800273715 /* Build configuration list for PBXNativeTarget "hNotifyTests" */;
 			buildPhases = (
 				046025030DA7436388DA814B /* Check Pods Manifest.lock */,
 				071B33BC180D218800273715 /* Sources */,
@@ -409,9 +409,9 @@
 			dependencies = (
 				07EB81E01810D4D40092AEB1 /* PBXTargetDependency */,
 			);
-			name = HatenaNotifyTests;
+			name = hNotifyTests;
 			productName = HatenaNotifyTests;
-			productReference = 071B33C0180D218800273715 /* HatenaNotifyTests.octest */;
+			productReference = 071B33C0180D218800273715 /* hNotifyTests.octest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		071B33DC180D283100273715 /* Acceptance Tests */ = {
@@ -462,7 +462,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 071B33A0180D218800273715 /* Build configuration list for PBXProject "HatenaNotify" */;
+			buildConfigurationList = 071B33A0180D218800273715 /* Build configuration list for PBXProject "hNotify" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -475,8 +475,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				071B33A4180D218800273715 /* HatenaNotify */,
-				071B33BF180D218800273715 /* HatenaNotifyTests */,
+				071B33A4180D218800273715 /* hNotify */,
+				071B33BF180D218800273715 /* hNotifyTests */,
 				071B33DC180D283100273715 /* Acceptance Tests */,
 			);
 		};
@@ -659,12 +659,12 @@
 /* Begin PBXTargetDependency section */
 		071B33EB180D283100273715 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 071B33A4180D218800273715 /* HatenaNotify */;
+			target = 071B33A4180D218800273715 /* hNotify */;
 			targetProxy = 071B33EA180D283100273715 /* PBXContainerItemProxy */;
 		};
 		07EB81E01810D4D40092AEB1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 071B33A4180D218800273715 /* HatenaNotify */;
+			target = 071B33A4180D218800273715 /* hNotify */;
 			targetProxy = 07EB81DF1810D4D40092AEB1 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -783,10 +783,10 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "HatenaNotify/HatenaNotify-Prefix.pch";
-				INFOPLIST_FILE = "HatenaNotify/HatenaNotify-Info.plist";
+				GCC_PREFIX_HEADER = "HatenaNotify/hNotify-Prefix.pch";
+				INFOPLIST_FILE = "HatenaNotify/hNotify-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = hNotify;
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				TEST_HOST = "$(BUNDLE_LOADER)";
@@ -805,10 +805,10 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "HatenaNotify/HatenaNotify-Prefix.pch";
-				INFOPLIST_FILE = "HatenaNotify/HatenaNotify-Info.plist";
+				GCC_PREFIX_HEADER = "HatenaNotify/hNotify-Prefix.pch";
+				INFOPLIST_FILE = "HatenaNotify/hNotify-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = hNotify;
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				TEST_HOST = "$(BUNDLE_LOADER)";
@@ -821,20 +821,20 @@
 			baseConfigurationReference = 341661B6A5F34EEB94A2AB27 /* Pods-HatenaNotifyTests.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/HatenaNotify.app/HatenaNotify";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/hNotify.app/hNotify";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "HatenaNotify/HatenaNotify-Prefix.pch";
+				GCC_PREFIX_HEADER = "HatenaNotify/hNotify-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "HatenaNotifyTests/HatenaNotifyTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "HatenaNotifyTests/hNotifyTests-Info.plist";
+				PRODUCT_NAME = hNotifyTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
 			};
@@ -845,16 +845,16 @@
 			baseConfigurationReference = 341661B6A5F34EEB94A2AB27 /* Pods-HatenaNotifyTests.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/HatenaNotify.app/HatenaNotify";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/hNotify.app//hNotify";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "HatenaNotify/HatenaNotify-Prefix.pch";
-				INFOPLIST_FILE = "HatenaNotifyTests/HatenaNotifyTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "HatenaNotify/hNotify-Prefix.pch";
+				INFOPLIST_FILE = "HatenaNotifyTests/hNotifyTests-Info.plist";
+				PRODUCT_NAME = hNotifyTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
 			};
@@ -865,7 +865,7 @@
 			baseConfigurationReference = 1FB478B8C85D4081A8C015CF /* Pods-Acceptance Tests.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/HatenaNotify.app/HatenaNotify";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/hNotify.app/hNotify";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -889,7 +889,7 @@
 			baseConfigurationReference = 1FB478B8C85D4081A8C015CF /* Pods-Acceptance Tests.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/HatenaNotify.app/HatenaNotify";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/hNotify.app/hNotify";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -907,7 +907,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		071B33A0180D218800273715 /* Build configuration list for PBXProject "HatenaNotify" */ = {
+		071B33A0180D218800273715 /* Build configuration list for PBXProject "hNotify" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				071B33CF180D218800273715 /* Debug */,
@@ -916,7 +916,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		071B33D1180D218800273715 /* Build configuration list for PBXNativeTarget "HatenaNotify" */ = {
+		071B33D1180D218800273715 /* Build configuration list for PBXNativeTarget "hNotify" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				071B33D2180D218800273715 /* Debug */,
@@ -925,7 +925,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		071B33D4180D218800273715 /* Build configuration list for PBXNativeTarget "HatenaNotifyTests" */ = {
+		071B33D4180D218800273715 /* Build configuration list for PBXNativeTarget "hNotifyTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				071B33D5180D218800273715 /* Debug */,
