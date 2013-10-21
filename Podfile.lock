@@ -19,6 +19,7 @@ PODS:
   - AFNetworking/Serialization (2.0.1)
   - AFNetworking/UIKit (2.0.1):
     - AFNetworking/NSURLConnection
+  - JVFloatLabeledTextField (0.0.2)
   - KIF (2.0.0)
   - Kiwi (2.2.2):
     - Kiwi/SenTestingKit
@@ -35,6 +36,7 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking (~> 2.0)
+  - JVFloatLabeledTextField
   - KIF (~> 2.0)
   - Kiwi (~> 2.2.2)
   - OHHTTPStubs
@@ -43,6 +45,7 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   AFNetworking: a6f11ac4ac087303e6ff87adc1ba57b0dac20ef8
+  JVFloatLabeledTextField: a74984afa47f8f18e59361590f64768f37fd16c1
   KIF: ff3b46deb62ce3f8e99c6a2c786729e1eea241ba
   Kiwi: 03539aeb004ccd42bdbc31253617b26364315df4
   OHHTTPStubs: d9cd35d84176e35cd2cb8bcaa3ad50fdfc660566

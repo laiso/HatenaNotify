@@ -5,14 +5,16 @@
 
 #import "HANAuthViewController.h"
 
+#import <JVFloatLabeledTextField/JVFloatLabeledTextField.h>
+
 #import "HANAPIClient.h"
 #import "HANAlertUtil.h"
 #import "HANAccountService.h"
 
 @interface HANAuthViewController()
 @property(nonatomic, weak) IBOutlet UIButton *authenticateButton;
-@property(nonatomic, weak) IBOutlet UITextField *hatenaIdField;
-@property(nonatomic, weak) IBOutlet UITextField *passwordField;
+@property(nonatomic, weak) IBOutlet JVFloatLabeledTextField *hatenaIdField;
+@property(nonatomic, weak) IBOutlet JVFloatLabeledTextField *passwordField;
 @property(nonatomic, strong) HANAPIClient *api;
 - (IBAction)authenticate:(id)sender;
 @end
@@ -31,7 +33,11 @@
 - (void)viewDidLoad
 {
   [super viewDidLoad];
+  
   self.authenticateButton.accessibilityLabel = self.authenticateButton.titleLabel.text;
+  
+  [self configureTextField];
+  
   [self.api logout];
 }
 
@@ -91,6 +97,12 @@
   alert.accessibilityLabel = [alert buttonTitleAtIndex:alert.cancelButtonIndex];
   alert.delegate = self;
   [alert show];
+}
+
+- (void)configureTextField
+{
+  [self.hatenaIdField setPlaceholder:self.hatenaIdField.placeholder];
+  [self.passwordField setPlaceholder:self.passwordField.placeholder];
 }
 
 @end
