@@ -50,6 +50,7 @@
 		07BC6F81180FB44300A8BD62 /* AcceptanceTestHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 07BC6F80180FB44300A8BD62 /* AcceptanceTestHelper.m */; };
 		07BC6F84180FDE6B00A8BD62 /* HANAccountService.m in Sources */ = {isa = PBXBuildFile; fileRef = 07BC6F83180FDE6B00A8BD62 /* HANAccountService.m */; };
 		07BC6F86180FDF2B00A8BD62 /* HANAccountServiceSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 07BC6F85180FDF2B00A8BD62 /* HANAccountServiceSpec.m */; };
+		07BD72EA1817F02400EAF7E9 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07BD72E91817F02400EAF7E9 /* Crashlytics.framework */; };
 		07E20B75180EF7C100D42091 /* PushNotificationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 07E20B74180EF7C100D42091 /* PushNotificationTests.m */; };
 		F6E3AB7BD25D4716811127DB /* libPods-hNotifyTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EA86BC1107924E3E97592BDD /* libPods-hNotifyTests.a */; };
 /* End PBXBuildFile section */
@@ -132,6 +133,7 @@
 		07BC6F82180FDE6B00A8BD62 /* HANAccountService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HANAccountService.h; sourceTree = "<group>"; };
 		07BC6F83180FDE6B00A8BD62 /* HANAccountService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HANAccountService.m; sourceTree = "<group>"; };
 		07BC6F85180FDF2B00A8BD62 /* HANAccountServiceSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HANAccountServiceSpec.m; sourceTree = "<group>"; };
+		07BD72E91817F02400EAF7E9 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Crashlytics.framework; path = Vendors/Crashlytics.framework; sourceTree = "<group>"; };
 		07E20B74180EF7C100D42091 /* PushNotificationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PushNotificationTests.m; sourceTree = "<group>"; };
 		07E56951180FE5420035DA85 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		07FC0443180F005C00FB07B0 /* HatenaNotify.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = HatenaNotify.entitlements; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 				074124A4180F911300AD5607 /* libPods.a in Frameworks */,
 				071B33AB180D218800273715 /* CoreGraphics.framework in Frameworks */,
 				071B33AD180D218800273715 /* UIKit.framework in Frameworks */,
+				07BD72EA1817F02400EAF7E9 /* Crashlytics.framework in Frameworks */,
 				071B33A9180D218800273715 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -211,6 +214,7 @@
 		071B33A7180D218800273715 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				07BD72E91817F02400EAF7E9 /* Crashlytics.framework */,
 				0772DB7518114CC600E27DE4 /* iAd.framework */,
 				077000B5180FF12A00408C82 /* SenTestingKit.framework */,
 				07E56951180FE5420035DA85 /* Accounts.framework */,
@@ -784,8 +788,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				BUNDLE_LOADER = "";
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Vendors",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HatenaNotify/hNotify-Prefix.pch";
 				INFOPLIST_FILE = "HatenaNotify/hNotify-Info.plist";
@@ -806,8 +814,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				BUNDLE_LOADER = "";
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Vendors",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HatenaNotify/hNotify-Prefix.pch";
 				INFOPLIST_FILE = "HatenaNotify/hNotify-Info.plist";
