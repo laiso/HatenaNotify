@@ -25,7 +25,7 @@ static NSString * const kCrashlyticsAPIKey = @"28fde398865f0fccdacc48015830ae1d5
 #ifdef DEBUG
   DLog(@"Current userName: %@", [[HANAccountService new] userName]);
 //  [[HANAccountService new] deleteAccount]; DLog(@"Delete account");
-  [@[] objectAtIndex:10]; // crash
+//  [@[] objectAtIndex:10]; // crash
 #endif
   
   
