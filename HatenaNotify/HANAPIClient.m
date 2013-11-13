@@ -33,8 +33,8 @@ static NSString * const kHANAPIClientCookieKey =@"HANAPIClientCookieKey";
     completionHandler(nil, @[]);
     return;
   }
-  
-  
+  AFHTTPRequestOperationManager* manager = [AFHTTPRequestOperationManager manager];
+  manager.responseSerializer = [AFHTTPResponseSerializer serializer];
   [self.request setResponseSerializer:[AFJSONResponseSerializer serializer]];
   [self.request GET:@"https://www.hatena.ne.jp/notify/api/pull"
          parameters:@{@"via": [[NSBundle mainBundle] bundleIdentifier],
