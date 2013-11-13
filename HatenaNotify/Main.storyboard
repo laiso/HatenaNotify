@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="h8W-U3-fDN">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="h8W-U3-fDN">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3746"/>
     </dependencies>
     <scenes>
         <!--Auth View Controller-->
@@ -239,13 +239,6 @@
                                     <outlet property="delegate" destination="cr1-Fe-F0d" id="6O3-nq-QU7"/>
                                 </connections>
                             </webView>
-                            <adBannerView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DzH-Ft-VMw">
-                                <rect key="frame" x="0.0" y="63" width="320" height="50"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <outlet property="delegate" destination="cr1-Fe-F0d" id="ayy-zX-B9C"/>
-                                </connections>
-                            </adBannerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -255,15 +248,9 @@
                                 <action selector="dismiss:" destination="cr1-Fe-F0d" id="bqQ-zf-DxI"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="広告を非表示" id="eFD-Hy-OSB">
-                            <connections>
-                                <action selector="onNavRightButton:" destination="cr1-Fe-F0d" id="5bs-GE-s8S"/>
-                            </connections>
-                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="closeButton" destination="qQ0-zB-ABy" id="c9x-58-uqu"/>
-                        <outlet property="disableAdsButton" destination="eFD-Hy-OSB" id="72Z-yf-ePx"/>
                         <outlet property="webView" destination="7sC-we-hCX" id="rpX-6j-9jC"/>
                     </connections>
                 </viewController>

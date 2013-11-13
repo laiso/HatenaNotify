@@ -18,23 +18,10 @@
 @interface HANWebViewController () <ADBannerViewDelegate, UIWebViewDelegate>
 @property(nonatomic, weak) IBOutlet UIWebView* webView;
 @property(nonatomic, weak) IBOutlet UIBarButtonItem *closeButton;
-@property(nonatomic, weak) IBOutlet ADBannerView *banner;
-@property(nonatomic, weak) IBOutlet UIBarButtonItem *disableAdsButton;
-@property(nonatomic, strong) HANPurchaseService* purchase;
 - (IBAction)dismiss:(id)sender;
-- (IBAction)onNavRightButton:(id)sender;
 @end
 
 @implementation HANWebViewController
-
-- (id)initWithCoder:(NSCoder *)aDecoder
-{
-  self = [super initWithCoder:aDecoder];
-  if(self){
-    _purchase = [HANPurchaseService new];
-  }
-  return self;
-}
 
 - (void)dealloc
 {
@@ -44,11 +31,8 @@
 - (void)viewDidLoad
 {
   [super viewDidLoad];
-
-  self.disableAdsButton.enabled = NO;
   
   [self configureAccessibility];
-  [self configureBanner];
   
   if(self.url){
     NSURLRequest* request = [NSURLRequest requestWithURL:self.url];
@@ -68,17 +52,6 @@
   [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-- (IBAction)onNavRightButton:(id)sender
-{
-  if(![SKPaymentQueue canMakePayments]){
-    [HANAlertUtil showError:@"iOS「設定→一般→機能制限」で「App内での購入」を有効にしてください"];
-    return;
-  }
-  
-  [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
-  [self.purchase startDisableAdsTransaction];
-}
-
 #pragma mark - UIWebViewDelegate
 - (void)webViewDidStartLoad:(UIWebView *)webView
 {
@@ -96,19 +69,6 @@
   [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
 }
 
-
-#pragma mark - ADBannerViewDelegate
-
-- (void)bannerViewDidLoadAd:(ADBannerView *)banner
-{
-  self.disableAdsButton.enabled = YES;
-}
-
-- (void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error
-{
-  DLog(@"bannerView:didFailToReceiveAdWithError");
-}
-
 #pragma mark - Private
 
 - (void)configureAccessibility
@@ -116,22 +76,5 @@
   self.closeButton.accessibilityLabel = @"CloseButton";
   self.webView.accessibilityLabel = @"webview";
 }
-
-- (void)configureBanner
-{
-  if([self.purchase isPurchased:kHatenaNotifyPurchaseDisableAds]){
-    [self makeHiddenBanner];
-  }else{
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(makeHiddenBanner) name:kHatenaNotifyDisableAdsNotification object:nil];
-  }
-}
-
-- (void)makeHiddenBanner
-{
-  self.navigationItem.rightBarButtonItem = nil;
-  self.banner.alpha = 1.00;
-  [self.view addSubview:self.webView];
-}
-
 
 @end
