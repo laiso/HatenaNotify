@@ -5,8 +5,6 @@
 //  Copyright (c) 2013 laiso. All rights reserved.
 //
 
-#import <Crashlytics/Crashlytics.h>
-
 #import "AppDelegate.h"
 #import "HANNotifyService.h"
 #import "HANAPIClient.h"
@@ -14,20 +12,15 @@
 #import "HANNotifyItem.h"
 
 static NSString * const kHatenaNotifyApp = @"";
-static NSString * const kCrashlyticsAPIKey = @"28fde398865f0fccdacc48015830ae1d50bec94b";
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-  [Crashlytics startWithAPIKey:kCrashlyticsAPIKey];
-
 #ifdef DEBUG
   DLog(@"Current userName: %@", [[HANAccountService new] userName]);
 //  [[HANAccountService new] deleteAccount]; DLog(@"Delete account");
-//  [@[] objectAtIndex:10]; // crash
 #endif
-  
   
   [application setMinimumBackgroundFetchInterval:UIApplicationBackgroundFetchIntervalMinimum];
   return YES;
