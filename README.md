@@ -1,10 +1,11 @@
 HatenaNotify
 ============
 
-Hatena Notify for iOS7
+Hatena Notify for iOS7 ([GPL v3](https://github.com/laiso/HatenaNotify/blob/master/LICENSE))
 
 詳しくはウェブで
 http://d.hatena.ne.jp/laiso+iphone/20131108/1383929262
+
 
 ![](Documents/ScreenShot/home.png)
 ![](Documents/ScreenShot/messagecenter.png)
