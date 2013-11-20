@@ -12,7 +12,6 @@
 #import <StoreKit/StoreKit.h>
 #import <AFNetworking/AFNetworkReachabilityManager.h>
 
-#import "HANPurchaseService.h"
 #import "HANAlertUtil.h"
 
 @interface HANWebViewController () <ADBannerViewDelegate, UIWebViewDelegate>

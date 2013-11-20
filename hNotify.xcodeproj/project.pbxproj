@@ -36,8 +36,6 @@
 		074F700E180D4ABB0063BC47 /* HANWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 074F700D180D4ABB0063BC47 /* HANWebViewController.m */; };
 		0750296C180E47D40029BDAC /* HANAPIClientSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 0750296B180E47D40029BDAC /* HANAPIClientSpec.m */; };
 		0772DB7618114CC600E27DE4 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0772DB7518114CC600E27DE4 /* iAd.framework */; };
-		0772DB791811519A00E27DE4 /* HANPurchaseService.m in Sources */ = {isa = PBXBuildFile; fileRef = 0772DB781811519A00E27DE4 /* HANPurchaseService.m */; };
-		0772DB7B181153A600E27DE4 /* HANPurchaseServiceSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 0772DB7A181153A600E27DE4 /* HANPurchaseServiceSpec.m */; };
 		0772DB7D1811573000E27DE4 /* PurchaseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0772DB7C1811573000E27DE4 /* PurchaseTests.m */; };
 		0779F917180E90180059F7E5 /* HANNotifyService.m in Sources */ = {isa = PBXBuildFile; fileRef = 0779F916180E90180059F7E5 /* HANNotifyService.m */; };
 		0779F91A180E92980059F7E5 /* HANNotifyItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 0779F919180E92980059F7E5 /* HANNotifyItem.m */; };
@@ -115,9 +113,6 @@
 		0750296B180E47D40029BDAC /* HANAPIClientSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HANAPIClientSpec.m; sourceTree = "<group>"; };
 		077000B5180FF12A00408C82 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		0772DB7518114CC600E27DE4 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
-		0772DB771811519A00E27DE4 /* HANPurchaseService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HANPurchaseService.h; sourceTree = "<group>"; };
-		0772DB781811519A00E27DE4 /* HANPurchaseService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HANPurchaseService.m; sourceTree = "<group>"; };
-		0772DB7A181153A600E27DE4 /* HANPurchaseServiceSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HANPurchaseServiceSpec.m; sourceTree = "<group>"; };
 		0772DB7C1811573000E27DE4 /* PurchaseTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PurchaseTests.m; sourceTree = "<group>"; };
 		0779F915180E90180059F7E5 /* HANNotifyService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HANNotifyService.h; sourceTree = "<group>"; };
 		0779F916180E90180059F7E5 /* HANNotifyService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HANNotifyService.m; sourceTree = "<group>"; };
@@ -265,7 +260,6 @@
 				0779F91C180E9BDB0059F7E5 /* HANNotifyItemSpec.m */,
 				07BC6F85180FDF2B00A8BD62 /* HANAccountServiceSpec.m */,
 				072453A718110FDE00804C43 /* HANNotifyServiceSpec.m */,
-				0772DB7A181153A600E27DE4 /* HANPurchaseServiceSpec.m */,
 			);
 			path = HatenaNotifyTests;
 			sourceTree = "<group>";
@@ -316,8 +310,6 @@
 				0779F919180E92980059F7E5 /* HANNotifyItem.m */,
 				07BC6F82180FDE6B00A8BD62 /* HANAccountService.h */,
 				07BC6F83180FDE6B00A8BD62 /* HANAccountService.m */,
-				0772DB771811519A00E27DE4 /* HANPurchaseService.h */,
-				0772DB781811519A00E27DE4 /* HANPurchaseService.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -623,7 +615,6 @@
 				074124AD180FA57A00AD5607 /* HANAlertUtil.m in Sources */,
 				074124A7180F99C500AD5607 /* HANAuthViewController.m in Sources */,
 				071B33B5180D218800273715 /* main.m in Sources */,
-				0772DB791811519A00E27DE4 /* HANPurchaseService.m in Sources */,
 				07BC6F84180FDE6B00A8BD62 /* HANAccountService.m in Sources */,
 				0779F91A180E92980059F7E5 /* HANNotifyItem.m in Sources */,
 				074F7002180D2FB30063BC47 /* HANAPIClient.m in Sources */,
@@ -638,7 +629,6 @@
 				071B33CE180D218800273715 /* HatenaNotifySpec.m in Sources */,
 				0750296C180E47D40029BDAC /* HANAPIClientSpec.m in Sources */,
 				07BC6F86180FDF2B00A8BD62 /* HANAccountServiceSpec.m in Sources */,
-				0772DB7B181153A600E27DE4 /* HANPurchaseServiceSpec.m in Sources */,
 				072453A818110FDE00804C43 /* HANNotifyServiceSpec.m in Sources */,
 				0779F91D180E9BDB0059F7E5 /* HANNotifyItemSpec.m in Sources */,
 				0779F922180E9D5F0059F7E5 /* TestHelper.m in Sources */,
