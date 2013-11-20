@@ -54,8 +54,8 @@ NSString * const kHatenaNotifyBackgroundfetchedNotification = @"HatenaNotifyBack
     
 #ifdef DEBUG
     // 通知テスト
-    completionHandler(errorOrNil, items);
-    return;
+//    completionHandler(errorOrNil, items);
+//    return;
 #endif
     completionHandler(errorOrNil, [wSelf findNewNotifyItems:items]);
 
